@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     if (user) setPage(user.role === "admin" ? "admin" : "menu");
-  }, []);
+  }, [user]);
 
   const showToast = (msg, type = "info") => {
     setToast({ msg, type });
